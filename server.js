@@ -51,7 +51,7 @@ app.listen(port, () => {
 // --- logic ---
 
 async function getAuthRequest(req, res) {
-    const hostUrl = " my_login_page.railway.internal";
+    const hostUrl = "myloginpage-production.up.railway.app";
     const sessionId = generateSessionId();
     const callbackURL = "/api/callback";
     const audience = "did:iden3:polygon:amoy:xFZ5sUp9y7cHfkz3pAk1Z4HNQTvCWQsTRBHk8Pjnq";
