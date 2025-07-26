@@ -19,6 +19,8 @@
     "express": "^5.1.0",
     "qrcode": "^1.5.4",
     "quick-lru": "5.1.0",
-    "raw-body": "^3.0.0"
+    "raw-body": "^3.0.0",
+    "node-telegram-bot-api": "^0.61.0"
+    
   }
 }

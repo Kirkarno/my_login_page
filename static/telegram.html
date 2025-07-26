@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login via Polygon ID</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 20px; }
+    #qrcode { margin: 20px auto; }
+  </style>
+</head>
+<body>
+  <h2>Scan QR with Privado Wallet</h2>
+  <canvas id="qrcode"></canvas>
+  <p id="status">Waiting for verification...</p>
+
+  <script>
+    let sessionId;
+
+    fetch("/api/sign-in")
+      .then(res => res.json())
+      .then(data => {
+        sessionId = data.sessionId;
+        QRCode.toCanvas(document.getElementById("qrcode"), JSON.stringify(data), { width: 256 });
+
+        poll();
+      });
+
+    function poll() {
+      fetch(`/api/status?sessionId=${sessionId}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data.verified) {
+            document.getElementById("status").innerText = "✅ Verified!";
+            Telegram.WebApp.sendData(JSON.stringify(data));
+            Telegram.WebApp.close();
+          } else {
+            setTimeout(poll, 2000);
+          }
+        });
+    }
+  </script>
+</body>
+</html>
