@@ -1,0 +1,12 @@
+export declare class DIDNetworkFlag {
+    readonly blockchain: string;
+    readonly networkId: string;
+    constructor(blockchain: string, networkId: string);
+    toString(): string;
+    static fromString(s: string): DIDNetworkFlag;
+}
+export declare function buildDIDType(method: string, blockchain: string, network: string): Uint8Array;
+export declare function findNetworkIDForDIDMethodByValue(method: string, byteNumber: number): string;
+export declare function findBlockchainForDIDMethodByValue(method: string, byteNumber: number): string;
+export declare function findDIDMethodByValue(byteNumber: number): string;
+//# sourceMappingURL=did-helper.d.ts.map
