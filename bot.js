@@ -12,7 +12,7 @@ bot.onText(/\/start/, (msg) => {
         {
           text: "Login",
           web_app: {
-            url: "https://myloginpage-production.up.railway.app"
+            url: "https://myloginpage-production.up.railway.app/"
           }
         }
       ]]
