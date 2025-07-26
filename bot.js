@@ -6,13 +6,13 @@ dotenv.config();
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
 bot.onText(/\/start/, (msg) => {
-  bot.sendMessage(msg.chat.id, "🔐 Log in via Privado Wallet", {
+  bot.sendMessage(msg.chat.id, "🔐 Log in via Privado ID", {
     reply_markup: {
       inline_keyboard: [[
         {
           text: "Login",
           web_app: {
-            url: "https://myloginpage-production.up.railway.app/"
+            url: "https://myloginpage-production.up.railway.app/telegram.html"
           }
         }
       ]]
