@@ -17,10 +17,9 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
+    "node-telegram-bot-api": "^0.61.0",
     "qrcode": "^1.5.4",
     "quick-lru": "5.1.0",
-    "raw-body": "^3.0.0",
-    "node-telegram-bot-api": "^0.61.0"
-    
+    "raw-body": "^3.0.0"
   }
 }
