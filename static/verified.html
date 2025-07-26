@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verification Successful</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img class="faculty-logo" src="https://scontent.fksc2-1.fna.fbcdn.net/v/t39.30808-6/366912845_1989712224696835_4688963524042319938_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=se2w6HSsF9MQ7kNvwHKvm7A&_nc_oc=AdnNxI2vW7Y1O0w2HKMUWlaKRjua-CAe3na3hY0k1_QiH0URf7JIqMehnNlsEz0mgzY&_nc_zt=23&_nc_ht=scontent.fksc2-1.fna&_nc_gid=JUKbnau_I0JN2Djr_-8SVA&oh=00_AfS_HOAjZ4TSeT_484Ew-qWkZySc5XLN_8GwDORR6mGBxw&oe=6886824C" alt="Faculty Logo" style="width:80px;margin-bottom:20px;">
+        <h2>Verification Successful!</h2>
+        <p id="user-info"></p>
+        <a href="/" class="action-button" style="margin-top:24px;">Go to Main Page</a>
+    </div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        const programName = params.get('programName');
+        document.getElementById('user-info').textContent =
+            `Name: ${name || '-'} | Program: ${programName || '-'}`;
+    </script>
+</body>
+</html>

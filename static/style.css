@@ -1,0 +1,139 @@
+/* Blue color palette */
+:root {
+    --primary-blue: #1565c0;
+    --secondary-blue: #1976d2;
+    --accent-blue: #42a5f5;
+    --background: #f0f6fc;
+    --white: #fff;
+    --text: #222;
+    --subtext: #555;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: var(--text);
+    padding: 0;
+    margin: 0;
+    background-color: var(--background);
+}
+
+/* Header Styles */
+.main-header {
+    display: flex;
+    align-items: center;
+    background: var(--primary-blue);
+    padding: 18px 32px;
+    box-shadow: 0 2px 8px rgba(21,101,192,0.08);
+    margin-bottom: 32px;
+}
+
+.faculty-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 18px;
+    background: var(--white);
+    border: 2px solid var(--accent-blue);
+}
+
+.faculty-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+/* Container Styles */
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 36px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(21,101,192,0.08);
+}
+
+/* Subheader Styles */
+.subheader {
+    font-size: 18px;
+    margin: 15px 0;
+    color: var(--subtext);
+}
+
+/* Button Styles */
+#button {
+    display: none;
+    padding: 15px 30px;
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--secondary-blue);
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#button:hover {
+    background-color: var(--accent-blue);
+    transform: translateY(-2px) scale(1.03);
+}
+
+/* QR Code Styles */
+#qrcode {
+    margin: 0 auto;
+    padding: 12px;
+    background: var(--background);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(21,101,192,0.07);
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        margin: 16px;
+        padding: 18px 6px;
+    }
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 10px;
+    }
+    .faculty-title {
+        font-size: 1.2rem;
+        margin-top: 8px;
+    }
+    .faculty-logo {
+        width: 40px;
+        height: 40px;
+    }
+}
+.action-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--secondary-blue);
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.action-button:hover {
+    background-color: var(--accent-blue);
+    transform: translateY(-2px) scale(1.03);
+}
